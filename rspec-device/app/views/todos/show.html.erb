@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @todo.title %>
+</p>
+
+<p>
+  <strong>Details:</strong>
+  <%= @todo.details %>
+</p>
+
+<p>
+  <strong>Start data:</strong>
+  <%= @todo.start_data %>
+</p>
+
+<p>
+  <strong>Expire date:</strong>
+  <%= @todo.expire_date %>
+</p>
+
+<p>
+  <strong>Completed status:</strong>
+  <%= @todo.completed_status %>
+</p>
+
+<%= link_to 'Edit', edit_todo_path(@todo) %> |
+<%= link_to 'Back', todos_path %>

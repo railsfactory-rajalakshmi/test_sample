@@ -1,0 +1,7 @@
+<h3>Check your TODO's</h3>
+<%= link_to "TODO's",todos_path%>
+<% if   user_signed_in? %>
+<%=link_to "sign_out",destroy_user_session_path,:method=>"delete"%>
+<% end %>
+
+

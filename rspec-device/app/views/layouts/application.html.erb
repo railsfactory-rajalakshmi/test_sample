@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RspecDevice</title>
+    <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <!--
+        <p class="notice"><%#= notice %></p>
+    <p class="alert"><%#= alert %></p>-->
+    <div class="navbar navbar-fixed-top">
+      <div class="container">
+        <%=image_tag("logo.jpg", width:"50", height:"50", alt:"Icon", class: "navbar-brand pull-left")%>
+        <div class="nav-collapse collapse navbar-responsive-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active">
+              <a href="/">home</a>
+            </li>
+            <li>
+              <a href="/">about us</a>
+            </li>
+            <li>
+              <a href="#">contact us</a>
+            </li>
+            <li class="dropdown">
+              <a href="#"class="dropdown-toggle" data-toggle="dropdown" >Task<strong class="caret"></strong></a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="#">Pending task</a>
+                </li>
+                <li>
+                  <a href="#">Completed Task</a>
+                </li>
+                <li>
+                  <a href="#">All Task</a>
+                </li>
+                <li class="divider"></li>
+                <li class="dropdown-header">Add/Delet Task </li>
+                <li>
+                  <a href="#">Add Task</a>
+                </li>
+                <li>
+                  <a href="#">Delete Task</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+              <form class="navbar-form pull-left">
+                <input type="text" class="form-control" placeholder="search this site..">
+                <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-search"></span></button>
+              </form>
+              <ul class="nav navbar-nav pull-right">
+                <li>
+                  <a href="#"><span class="glyphicon glyphicon-user"></span> My Account</a>
+                </li>
+              </ul>
+        </div>
+      </div>
+      <div class="container">
+        <%= yield %>
+      </div>
+  </body>
+</html>
